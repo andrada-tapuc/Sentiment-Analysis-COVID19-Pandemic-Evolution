@@ -13,14 +13,14 @@
 
     <!-- Website style -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <title>COVID-19 Pandemic Evolution</title>
+    <title>COVID-19 Pandemic Evolution Analysis</title>
 </head>
 <body>
 <div class="main">
     <header class="container-fluid site-header inner-header">
         <div class="container p-0">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="/">COVID-19 Pandemic Evolution</a>
+                <a class="navbar-brand" href="/">COVID-19 Pandemic Evolution Analysis</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +48,7 @@
 </div>
 </div>
 <footer class="container-fluid">
-    <div class="row"><span class="copy">@Copyright COVID-19 Pandemic Evolution</span></div>
+    <div class="row"><span class="copy">@Copyright COVID-19 Pandemic Evolution Analysis</span></div>
 </footer>
 @section('scripts')
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

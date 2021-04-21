@@ -35,6 +35,11 @@ footer {
 .noh {
     cursor: default;
 }
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 80%;
+    }
+}
 .site-header {
     position: fixed;
     top: 0;
@@ -191,7 +196,8 @@ footer span.copy {
 }
 .temporary-offers-wrap {
     background-color: #752b2b75;
-    padding-top: 50px;
+    padding-top: 3 0px;
+    padding-bottom: 30px;
 }
 .about-wrap{
     text-align: center;
@@ -209,7 +215,7 @@ footer span.copy {
 }
 .cap-item a:hover {
     transform: translateY(-20px);
-    box-shadow: 10px 10px rgba(255, 0, 0, 0.7)
+    box-shadow: 10px 10px rgba(73, 7, 9, 0.61)
 }
 .cap-item img {
     max-width: 100%;
@@ -242,4 +248,7 @@ footer span.copy {
     font-weight: bold;
     font-size: 22px;
     display: list-item;
+}
+#toolbar-container .tab-toolbar {
+    display: none;
 }
