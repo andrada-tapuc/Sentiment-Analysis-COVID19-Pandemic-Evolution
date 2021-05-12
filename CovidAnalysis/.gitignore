@@ -16,6 +16,12 @@ yarn-error.log
 /public/.htaccess
 composer.lock
 /composer.lock
+/composer.json
 .git
 package.json
 package-lock.json
+../Ner-Processing/processing_data_chunks/data_chunks
+../Ner-Processing/venv
+../Ner-Processing/api_keys.json
+../Ner-Processing/processing_data_chunks/full_data_chunks
+../Ner-Processing/processing_data_chunks/total_hydrated

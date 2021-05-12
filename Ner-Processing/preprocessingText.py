@@ -1,4 +1,3 @@
-import emoji as emoji
 import nltk
 import string
 from nltk import ne_chunk
@@ -11,14 +10,6 @@ from nltk.stem import PorterStemmer
 # nltk.download('averaged_perceptron_tagger')
 # nltk.download('punkt')
 # nltk.download('maxent_ne_chunker')
-
-def convertEmojiInText(tweet):
-    tweet = emoji.demojize(tweet)
-    tweet = tweet.replace(":", " ")
-    tweet = ' '.join(tweet.split())
-    return tweet
-# print(convertEmojiInText("He is :-) and she is <3."))
-
 
 def removePunctuation(text):
     text_clean = "".join([i for i in text if i not in string.punctuation])
@@ -101,16 +92,4 @@ def preprocessText(text):
     chunk_list = chunking(text_tagged)
 
     # Chunking2
-    chunking2(text_tagged)
-    return chunk_list
-
-
-print(preprocessText(
-    "Avengers: Endgame is  :) a @2019@ American superhero film ...based... on the Marvel==== Comics superhero team the Avengers, "
-    "produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. The movie features an "
-    "ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, and others. (Source: "
-    "wikipedia)."))
-# preprocessText("Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the "
-#  "Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. The movie features an "
-#  "ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, and others. (Source: "
-#  "wikipedia).")
+    return lemmatized_words
