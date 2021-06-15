@@ -65,7 +65,7 @@ footer {
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav.active .nav-link {
     color: white !important;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 .scroll .navbar-light .navbar-nav .nav-link,.scroll .navbar-light .navbar-nav.active .nav-link {
@@ -196,8 +196,9 @@ footer span.copy {
 }
 .temporary-offers-wrap {
     background-color: #752b2b75;
-    padding-top: 3 0px;
+    padding-top: 3px;
     padding-bottom: 30px;
+    height: 225px;
 }
 .about-wrap{
     text-align: center;
@@ -206,12 +207,16 @@ footer span.copy {
     margin-top: 3%;
     margin-bottom: 3%;
 }
+.about-wrap p{
+    text-align: justify;
+}
 .cap-item {
     text-align: center;
 }
 .cap-item a {
     display: inline-block;
     transition: .4s;
+    margin-top: 30px;
 }
 .cap-item a:hover {
     transform: translateY(-20px);
@@ -236,6 +241,9 @@ footer span.copy {
 #about-covid .based-wrap{
     font-size: 25px;
 }
+.filters-subtitle{
+    margin-top: 4em;
+}
 .filters-subtitle p,
 .filters-title p{
     font-size: 19px;
@@ -251,4 +259,20 @@ footer span.copy {
 }
 #toolbar-container .tab-toolbar {
     display: none;
+}
+.site-header.scroll{
+    box-shadow: 0 2px 5px rgb(123 49 49 / 56%);
+}
+.tabs-nmodels .ui-state-active,.tabs-nmodels .ui-widget-content .ui-state-active,.tabs-nmodels .ui-widget-header .ui-state-active,.tabs-nmodels a.ui-button:active,.tabs-nmodels .ui-button:active,.tabs-nmodels .ui-button.ui-state-active:hover {
+    border: 1px solid #bf9d9d;
+    background: #bf9d9d;
+}
+.statistic-wrap{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+#map{
+    z-index: 10;
+    height: 600px;
+    width: 100%;
 }
