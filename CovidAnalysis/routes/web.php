@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/about', 'HomeController@about')->name('about');
+
+Route::get('/map', 'AnalysisController@mapCharts')->name('map-page');
+
+Route::get('/statistics', 'AnalysisController@statisticsCharts')->name('statistics');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/test', 'AnalysisController@test')->name('test');
-
-Route::get('/testTwitter', 'ApiController@testTwitterApi')->name('testTwitter');
