@@ -4,6 +4,7 @@ from nltk import ne_chunk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+from nltk.tokenize import TweetTokenizer
 
 
 # nltk.download('wordnet')
@@ -93,3 +94,24 @@ def preprocessText(text):
 
     # Chunking2
     return lemmatized_words
+
+
+def clean_text_special_characters(initial_text):
+    text = removeStopwords(initial_text)
+    cleanText = str(text)
+    # Remove urls
+    cleanText = re.sub(r"http\S+", '', cleanText)
+
+    # Change special characters and delete irrelevant words
+    cleanText = re.sub('b\'', '', cleanText)
+    cleanText = re.sub('\"b\"', '', cleanText)
+    cleanText = re.sub('\"b\'', '', cleanText)
+    cleanText = re.sub('[1-90]+', '', cleanText)
+    cleanText = re.sub('[^a-zA-z ]', '', cleanText)
+    cleanText = re.sub('(\b[a-zA-z]{3}\b)', '', cleanText)
+
+    cleanText = cleanText.strip()
+    if cleanText != '':
+        return cleanText.lower()
+
+
