@@ -2,7 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\ContinentFrequency;
+use App\CoronaFrequency;
+use App\CountryFrequency;
+use App\Location;
+use App\ModelBigram;
+use App\ModelTrigram;
+use App\ModelUnigram;
+use App\VaccinFrequency;
 use Illuminate\Http\Request;
+use App\Charts\SentimentFrequencyChart;
+use App\SentimentFrequency;
+
 
 class HomeController extends Controller
 {
@@ -13,7 +24,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -25,4 +35,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+
 }
