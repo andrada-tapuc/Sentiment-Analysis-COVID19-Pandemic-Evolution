@@ -37,7 +37,7 @@ footer {
 }
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 80%;
+        max-width: 95%;
     }
 }
 .site-header {
@@ -55,7 +55,7 @@ footer {
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
     color: white;
     font-family: "Nunito Sans", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     padding: 0;
 }
@@ -111,12 +111,12 @@ footer {
     .navbar-light .navbar-toggler {
         border-color: rgba(255,255,255,.1);
     }
-    .navbar-light .navbar-toggler-icon {
-        background-image: url(../img/open-menu-white.png);
-    }
-    .scroll .navbar-light .navbar-toggler-icon {
-        background-image: url(../img/open-menu.png);
-    }
+    /*.navbar-light .navbar-toggler-icon {*/
+    /*    background-image: url(../img/open-menu-white.png);*/
+    /*}*/
+    /*.scroll .navbar-light .navbar-toggler-icon {*/
+    /*    background-image: url(../img/open-menu.png);*/
+    /*}*/
     .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav.active .nav-link {
         color: #333 !important;
     }
@@ -148,7 +148,7 @@ footer span.copy {
     padding-top: 150px;
 }
 .action-wrap {
-    height: 60vh;
+    height: 40vh;
     position: relative;
     margin-bottom: 0;
 }
@@ -260,6 +260,9 @@ footer span.copy {
 #toolbar-container .tab-toolbar {
     display: none;
 }
+.site-header{
+    z-index: 999;
+}
 .site-header.scroll{
     box-shadow: 0 2px 5px rgb(123 49 49 / 56%);
 }
@@ -272,7 +275,19 @@ footer span.copy {
     margin-bottom: 30px;
 }
 #map{
+    height: 650px;
+    width: 80%;
     z-index: 10;
-    height: 600px;
-    width: 100%;
+    margin-left: 10%;
+}
+.about_photo{
+    height: 100%;
+    border-radius: 10px;
+}
+.about-rigth{
+    border: 1px solid #f56e6ea8;
+    box-shadow: 5px 5px 6px 4px #f5816ea6;
+    border-radius: 10px;
+    text-align: start;
+    padding: 15px;
 }
