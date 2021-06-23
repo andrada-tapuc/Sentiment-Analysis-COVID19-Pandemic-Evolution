@@ -8,7 +8,7 @@
                 Sentiment analysis based on tweets between January 15, 2020 and March 25, 2021, from <a href="https://zenodo.org/record/3738018#.YMkSK6gzaUn">Covid19 Twitter dataset</a>.
             </div>
             <div class="col-12 col-sm-8 description-based-wrap">
-                Working with larger tweets about COVID-19 (coronavirus), the results are projected on graphs, charts and a global map with explanations of each illustrated statistic.
+                Working with larger tweets about COVID-19 (coronavirus),his project aims to identify the peak moments of the Covid-19 pandemic and the period in which the world's population began to consider the vaccine against it and to develop a map of the emotions on Twitter conveyed by user's posts according to the GPS coordinates and highlight key moments during the COVID pandemic.
             </div>
         </div>
     </div>
@@ -28,21 +28,22 @@
     </div>
     <div class="container about-wrap home-wrap">
         <h1>About Covid-19 Virus</h1>
-        <p>As we know, the entire population of the globe has been alerted since the end of 2019 by the COVID-19 virus. This sad topic has become the most popular and most debated topic both in meetings with friends or family, and on social networks with strangers from all over the world. Opinions were divided from the beginning, some people being much too panicked and others maybe too optimistic. Based on these, we can identify the highest moment of the COVID-19 pandemic, but also the moment when people learned to live with this enemy virus.</p>
-        <p>Our lives has changed more and more by the pandemic triggered by the Covid19 virus (Coronavirus). It all started at the end of 2019, in the Chinese city of Wuhan, following an infection from animal to human, thus assuming that this virus started from the markets with live animals. COVID-19 has spread rapidly throughout China, but by January 15, 2020, it had infected more than 200 countries across the globe.</p>
-        <p>The project aims to develop a big-data analysis system, for determining and classifying the feelings in real time of some tweet messages from the social network Twitter, related to the subject Covid-19 / Coronavirus. This analysis will be based on real input data, and the results obtained reflect feelings in today's world. </p>
+        <p>Among the most popular social networks is Twitter, which was founded in 2006 in the US, with a 15-year experience in virtual life, which has 330 million active users per month, and the posts are called tweets. Unfortunately, this application is not as popular all over the globe, for example in Romania the most popular social network remains Facebook.
+            As mentioned above, Twitter is a platform that keeps you up to date with news and where many users share their opinions on all kinds of topics, especially when there are global crises. Such an explosion on social networks took place with the onset of the coronavirus pandemic in December 2019, when the first Covid-19 case was announced in Wuhan, China, which later became the first outbreak of coronavirus. Covid-19 first manifested itself as pneumonia, and later scientists noticed various symptoms to recognize it, and the first declared causes seem to have started in animal markets, the origin of this virus being in bats. The spread of this virus was very rapid throughout the globe.
+        </p>
+        <p>On January 30, 2020, the WHO declared a global state of emergency for health and followed various safety measures for the population, but the virus has spread to many countries, causing a considerable number of deaths and victims of lung disease seriously, at present statistics show that there are 177 million cases of which 3,82 million are dead.</p>
     </div>
     <div class="container about-wrap home-wrap">
         <h1>About Covid-19 Vaccine</h1>
-        <p>As we know, the entire population of the globe has been alerted since the end of 2019 by the COVID-19 virus. This sad topic has become the most popular and most debated topic both in meetings with friends or family, and on social networks with strangers from all over the world. Opinions were divided from the beginning, some people being much too panicked and others maybe too optimistic. Based on these, we can identify the highest moment of the COVID-19 pandemic, but also the moment when people learned to live with this enemy virus.</p>
-        <p>Our lives has changed more and more by the pandemic triggered by the Covid19 virus (Coronavirus). It all started at the end of 2019, in the Chinese city of Wuhan, following an infection from animal to human, thus assuming that this virus started from the markets with live animals. COVID-19 has spread rapidly throughout China, but by January 15, 2020, it had infected more than 200 countries across the globe.</p>
-        <p>The project aims to develop a big-data analysis system, for determining and classifying the feelings in real time of some tweet messages from the social network Twitter, related to the subject Covid-19 / Coronavirus. This analysis will be based on real input data, and the results obtained reflect feelings in today's world. </p>
+        <p>All people went through terrible times, coronavirus becoming the main enemy in the fight against life. Over time, we have learned to live with this fear and adapt to the new times and recommended precautions.
+            During the Covid-19 pandemic, researchers tried to develop the best vaccines against this virus. Thus, in December 2020, the first vaccine was approved, Pfizer BioNTech, and in the same month, the administration of the vaccine to the world's population began. Many other vaccines followed, and in March 2021, 308 vaccines were on the rise and development.
+        </p>
     </div>
     <div class="container about-wrap home-wrap">
         <h1>Analysis Dataset</h1>
-        <p>As we know, the entire population of the globe has been alerted since the end of 2019 by the COVID-19 virus. This sad topic has become the most popular and most debated topic both in meetings with friends or family, and on social networks with strangers from all over the world. Opinions were divided from the beginning, some people being much too panicked and others maybe too optimistic. Based on these, we can identify the highest moment of the COVID-19 pandemic, but also the moment when people learned to live with this enemy virus.</p>
-        <p>Our lives has changed more and more by the pandemic triggered by the Covid19 virus (Coronavirus). It all started at the end of 2019, in the Chinese city of Wuhan, following an infection from animal to human, thus assuming that this virus started from the markets with live animals. COVID-19 has spread rapidly throughout China, but by January 15, 2020, it had infected more than 200 countries across the globe.</p>
-        <p>The project aims to develop a big-data analysis system, for determining and classifying the feelings in real time of some tweet messages from the social network Twitter, related to the subject Covid-19 / Coronavirus. This analysis will be based on real input data, and the results obtained reflect feelings in today's world. </p>
+        <p>In addition to the tweets extracted with the Twitter API, we took over a very large data set, created by Juan M. Banda and Elena Tutubalina for scientific analysis. The <a href="https://zenodo.org/record/3738018#.YJO447UzaUn">Covid19 Twitter dataset</a> is updated every day with new tweets added about Covid19, so there is data from January 15, 2020 to April 4, 2021.</p>
+        <p>Initially, there were 152,920,832 tweets in this data set, and after the removal of retweets, 30,990,645 remained. Because our analysis refers only to posts in English, tweets in other languages were ignored, as well as posts without text or repetitive, so the data set with which we started the analysis consists of <b>650,000</b> tweets, on which sentiment was applied sentiment analysis. These posts were recorded in the full_tweets table in the database.</p>
+        <p>From the previously mentioned data set, processed and analyzed from the point of view of the expressed feeling, the tweets with the declared location were kept, thus forming the data set subsequently projected on the statistical map, consisting of <b>183,564</b> records.</p>
     </div>
 </div>
 @endsection
@@ -54,4 +55,3 @@
 @section('styles')
     @parent
 @endsection
-
