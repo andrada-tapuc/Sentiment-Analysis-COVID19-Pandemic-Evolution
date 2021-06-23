@@ -44,7 +44,6 @@ class AnalysisController extends Controller
 
     public static function getCompleteAnalysis($sentence){
 
-//        $analysis = new SentimentAnalysis(storage_path('custom_dictionary/'));
         return json_encode([
             'Negative' => self::isNegativeAnalysis($sentence),
             'Neutral' => self::isNeutralAnalysis($sentence),
@@ -91,8 +90,7 @@ class AnalysisController extends Controller
 
     public function mapCharts()
     {
-//        $coordinates = Location::all();
-        $coordinates = Location::limit(50)->get();
+        $coordinates = Location::all();
         $coordinates_count = count($coordinates);
         $map_markes = array ();
         foreach ($coordinates as $key => $location) {
@@ -102,9 +100,9 @@ class AnalysisController extends Controller
             );
         }
 
-        $country = CountryFrequency::limit(25)->orderBy('total_tweets', 'DESC')->pluck('total_tweets', 'country');
-        $positiveCountry = CountryFrequency::pluck('positive_tweets', 'country');
-        $negativeCountry = CountryFrequency::pluck('negative_tweets', 'country');
+        $country = CountryFrequency::limit(20)->orderBy('total_tweets', 'DESC')->pluck('total_tweets', 'country');
+        $positiveCountry =  CountryFrequency::limit(20)->orderBy('total_tweets', 'DESC')->pluck('positive_tweets', 'country');
+        $negativeCountry = CountryFrequency::limit(20)->orderBy('total_tweets', 'DESC')->pluck('negative_tweets', 'country');
         $countryChart = new SentimentFrequencyChart;
         $countryChart->labels($country->keys());
         $countryChart->dataset('Count of tweets', 'line',  $country->values())
@@ -115,8 +113,8 @@ class AnalysisController extends Controller
             ->backgroundColor('#CD5C5C');
 
         $continents = ContinentFrequency::orderBy('total_tweets', 'DESC')->pluck('total_tweets', 'continent');
-        $positiveContinents = ContinentFrequency::pluck('positive_tweets', 'continent');
-        $negativeContinents = ContinentFrequency::pluck('negative_tweets', 'continent');
+        $positiveContinents = ContinentFrequency::orderBy('total_tweets', 'DESC')->pluck('positive_tweets', 'continent');
+        $negativeContinents = ContinentFrequency::orderBy('total_tweets', 'DESC')->pluck('negative_tweets', 'continent');
         $continentsChart = new SentimentFrequencyChart;
         $continentsChart->labels($continents->keys());
         $continentsChart->dataset('Count of tweets', 'line',  $continents->values())
@@ -204,6 +202,14 @@ class AnalysisController extends Controller
         $chartVaccineFrequency->dataset('Vaccine', 'line', $vaccinFrequency->values())
             ->backgroundColor('#90EE90');
 
-        return view('statistics', compact(['chartCountTweet', 'chartUnigram', 'chartBigram', 'chartTrigram', 'chartCovidFrequency','chartVaccineFrequency']));
+        $topicsChart = new SentimentFrequencyChart;
+        $topicsChart->labels(["Health & Medicine", "Entertainment & Recreation", "Society", "Humanities","Gardening", "Science & Mathematics", "Education", "Consumer Electronics", "Home", "Animals"]);
+        $topicsChart->dataset('Count of tweets', 'pie', [40079, 19553, 17672, 16463, 2177, 1358, 1248, 851, 589, 477])
+            ->backgroundColor(['#2ec7c9','#b6a2de','#5ab1ef','#ffb980','#d87a80',
+                '#8d98b3','#e5cf0d','#97b552','#95706d','#dc69aa']);
+
+
+
+        return view('statistics', compact(['chartCountTweet', 'chartUnigram', 'chartBigram', 'chartTrigram', 'topicsChart', 'chartCovidFrequency','chartVaccineFrequency']));
     }
 }
